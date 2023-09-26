@@ -3,8 +3,8 @@ from openvino.runtime import Core
 import numpy as np
 
 # Define the paths to the model files
-model_xml_path = "person-vehicle-bike-detection-crossroad-1016.xml"
-model_bin_path = "person-vehicle-bike-detection-crossroad-1016.bin"
+model_xml_path = "../assets/models/person-vehicle-bike-detection-crossroad-1016.xml"
+model_bin_path = "../assets/models/person-vehicle-bike-detection-crossroad-1016.bin"
 
 # Initialize the Inference Engine and load the model
 ie = Core()
@@ -17,7 +17,7 @@ input_layer_ir = compiled_model.input(0)
 output_layer_ir = compiled_model.output(0)
 
 # Open the video file
-cap = cv2.VideoCapture("crosswalk.gif")
+cap = cv2.VideoCapture("../assets/videos/crosswalk.gif")
 
 # Initialize the FPS counter
 fps_start_time = cv2.getTickCount()
