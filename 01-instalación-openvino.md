@@ -24,17 +24,6 @@ Visit the official OpenVINO website and download the version compatible with you
 1. Installation of OpenVINO runtime from archives
     - Linux: [Instalation link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_installing_openvino_from_archive_linux.html)
     - Windows: [Instalation link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_installing_openvino_from_archive_windows.html)
-  
-2. Initialize environment variables
-    
-    ```
-    # linux
-    source /opt/intel/openvino_2022/setupvars.sh
-    
-    # windows
-    "C:\Program Files (x86)\Intel\openvino_2022\setupvars.bat"
-    ```
-    
 
 ### 2. Additional Configuration for the Intel NCS2 (Linux Only)
 
