@@ -33,3 +33,5 @@ The model will be converted to IR format and saved in the current directory as `
 
 ## 3. Running the image classification notebook
 You can find the notebook for this section in [image_classification_openvino_inference.ipynb](image_classification/image_classification_openvino_inference.ipynb). This notebook contains the code to perform image classification using the OpenVINO inference engine with the custom model that we converted to IR format in the previous section.
+
+In this section we have learned how to use the OpenVINO Model Optimizer to convert a custom model to the Intermediate Representation format. Then, we have learned how to use the OpenVINO inference engine to perform image classification with the custom model.
