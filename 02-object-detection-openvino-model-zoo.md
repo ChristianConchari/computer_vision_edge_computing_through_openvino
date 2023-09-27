@@ -22,15 +22,23 @@ In this section, we will use the OpenVINO Model Zoo to perform object detection 
 ### 2.1 Downloading the pre-trained model
 The OpenVINO Model Zoo contains a variety of pre-trained models that can be used for object detection. In this workshop, we will use the **person-vehicle-bike-detection-crossroad-1016** model, which is a pre-trained model that can detect people in images and videos. This model is located in the **intel** folder of the **models** folder.
 
-To download the pre-trained model, execute the following command in your terminal:
+To download the pre-trained model, first navigate to the **open_model_zoo\models\intel\person-vehicle-bike-detection-crossroad-1016** folder of the OpenVINO Model Zoo repository. Then, execute the following command:
 
 ```
 omz_downloader --name person-vehicle-bike-detection-crossroad-1016
 ```
 
-This command will download the model and its configuration files to the **open_model_zoo/models/intel/person-vehicle-bike-detection-crossroad-1016** folder. Inside this folder, you will find the following files:
+This command will download the model and its configuration files to the **open_model_zoo/models/intel/person-vehicle-bike-detection-crossroad-1016/intel/person-vehicle-bike-detection-crossroad-1016/** folder. Inside this folder, you will find the following files:
+- **FP16**: Contains the model in the FP16 format.
+- **FP16-INT8**: Contains the model in the FP16-INT8 format.
+- **FP32**: Contains the model in the FP32 format.
+
+The NCS2 device only supports the FP16 format, so we will use the model in the FP16 format. Inside the **FP16** folder, you will find the following files:
+
 - **person-vehicle-bike-detection-crossroad-1016.bin**: Contains the weights of the model.  
 - **person-vehicle-bike-detection-crossroad-1016.xml**: Contains the configuration of the model.
+
+Copy both files to the **object_detection/resources/models** folder. 
 
 Note that since the model was pre-trained by Intel, it is not necessary to perform additional conversion steps.
 
