@@ -25,28 +25,7 @@ Visit the official OpenVINO website and download the version compatible with you
     - Linux: [Instalation link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_installing_openvino_from_archive_linux.html)
     - Windows: [Instalation link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_installing_openvino_from_archive_windows.html)
 
-### 2. Additional Configuration for the Intel NCS2 (Linux Only)
-Navigate to the install_dependencies folder in the OpenVINO installation directory:
-
-```
-cd <INSTALL_DIR>/install_dependencies
-```
-
-Then, run the following command:
-
-```
-sudo -E ./install_NCS_udev_rules.sh
-```
-
-If something fails, complete the following configuration steps on your operating system:
-
-- [Configuration link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_configurations_for_ncs2.html#ncs-guide)
-
-You can also refer to the following resource:
-
-- [Addtional configuration resources](https://medium.com/openvino-toolkit/how-to-run-openvino-with-neural-compute-stick-2-on-linux-9ab1f185c920)
-
-### 3. Virtual Environment Setup
+### 2. Virtual Environment Setup
 
 It is recommended to use [Anaconda](https://www.anaconda.com/download) to set up the virtual environment.
 
@@ -114,7 +93,27 @@ It is recommended to use [Anaconda](https://www.anaconda.com/download) to set up
     ie = Core()
     print(ie.available_devices)
     ```
-    
+
+### 3. Additional Configuration for the Intel NCS2 (Linux Only)
+Navigate to the install_dependencies folder in the OpenVINO installation directory:
+
+```
+cd <INSTALL_DIR>/install_dependencies
+```
+
+Then, run the following command:
+
+```
+sudo -E ./install_NCS_udev_rules.sh
+```
+
+If something fails, complete the following configuration steps on your operating system:
+
+- [Configuration link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_configurations_for_ncs2.html#ncs-guide)
+
+You can also refer to the following resource:
+
+- [Addtional configuration resources](https://medium.com/openvino-toolkit/how-to-run-openvino-with-neural-compute-stick-2-on-linux-9ab1f185c920)
 
 You're all set! Now you have OpenVINO configured on your computer, and you're ready to explore the exciting world of Artificial Vision through Edge Computing.
 
