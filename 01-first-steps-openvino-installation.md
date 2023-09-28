@@ -17,7 +17,7 @@ Before you begin, make sure your computer meets the following requirements:
 
 ## Installation Steps
 
-### 1. Download and Install OpenVINO
+### 1. Download and Install OpenVINO 2022.3.1
 
 Visit the official OpenVINO website and download the version compatible with your operating system from the following links:
 
@@ -26,12 +26,23 @@ Visit the official OpenVINO website and download the version compatible with you
     - Windows: [Instalation link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_installing_openvino_from_archive_windows.html)
 
 ### 2. Additional Configuration for the Intel NCS2 (Linux Only)
+Navigate to the install_dependencies folder in the OpenVINO installation directory:
 
-Complete the following configuration steps on your operating system:
+```
+cd <INSTALL_DIR>/install_dependencies
+```
+
+Then, run the following command:
+
+```
+sudo -E ./install_NCS_udev_rules.sh
+```
+
+If something fails, complete the following configuration steps on your operating system:
 
 - [Configuration link](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_configurations_for_ncs2.html#ncs-guide)
 
-If you encounter any issues with the configuration, you can also refer to the following resource:
+You can also refer to the following resource:
 
 - [Addtional configuration resources](https://medium.com/openvino-toolkit/how-to-run-openvino-with-neural-compute-stick-2-on-linux-9ab1f185c920)
 
@@ -42,13 +53,13 @@ It is recommended to use [Anaconda](https://www.anaconda.com/download) to set up
 1. Execute the following command in the terminal or Anaconda Prompt:
     
     ```
-    conda create -n openvino_env python=3.10
+    conda create -n openvino_env python=3.9
     ```
     
 2. Activate the virtual environment:
     
     ```
-    conda activate my_env
+    conda activate openvino_env
     
     # Para desactivar el ambiente virtual se usa:
     # conda deactivate
@@ -66,13 +77,13 @@ It is recommended to use [Anaconda](https://www.anaconda.com/download) to set up
     pip install numpy
     pip install opencv-python
     pip install matplotlib
-    pip install tensorflow
+
     ```
 
 5. Install the development tools [Openvino-dev](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_install_dev_tools.html#doxid-openvino-docs-install-guides-install-dev-tools)
     
     ```
-    pip install openvino-dev
+    pip install openvino-dev[tensorflow2]==2022.3.1
     ```
 
 6. Test the installation by running the following command:
