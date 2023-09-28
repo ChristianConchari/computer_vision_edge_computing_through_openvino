@@ -20,7 +20,7 @@ Inside the **models** folder, you will find the following folders:
 In this section, we will use the OpenVINO Model Zoo to perform object detection on images and videos.
 
 ### 2.1 Downloading the pre-trained model
-The OpenVINO Model Zoo contains a variety of pre-trained models that can be used for object detection. In this workshop, we will use the **person-vehicle-bike-detection-crossroad-1016** model, which is a pre-trained model that can detect people in images and videos. This model is located in the **intel** folder of the **models** folder.
+The OpenVINO Model Zoo contains a variety of pre-trained models that can be used for object detection. In this workshop, we will use the **person-vehicle-bike-detection-crossroad-1016** model, which is a pre-trained model that can detect people in images and videos. This model is located in the `models/intel` folder.
 
 To download the pre-trained model, first navigate to the **open_model_zoo\models\intel\person-vehicle-bike-detection-crossroad-1016** folder of the OpenVINO Model Zoo repository. Then, execute the following command:
 
@@ -43,17 +43,20 @@ Copy both files to the **object_detection/resources/models** folder.
 Note that since the model was pre-trained by Intel, it is not necessary to perform additional conversion steps.
 
 ### 2.2 Running the object detection notebook
-You can find the notebook for this section in [opevino_detection_model_zoo.ipynb](opevino_detection_model_zoo.ipynb). This notebook contains the code to perform object detection on images and using the pre-trained model that we downloaded in the previous section.
+You can find the notebook for this section in [object_detection_model_zoo.ipynb](object_detection_model_zoo.ipynb). This notebook contains the code to perform object detection on images and using the pre-trained model that have just downloaded.
 
 ### 2.3 Running the object detection on videos script
-You can find the script for this section in [video_object_detection.py](video_object_detection.py). This script contains the code to perform object detection on videos using the pre-trained model that we downloaded in the previous section.
+Find the script for this section in [video_object_detection.py](video_object_detection.py). This script contains the code to perform object detection on videos.
 
 To run the script, execute the following command in your terminal:
 
 ``` 
-python video_object_detection.py -m -i resources/cars_1920x1080.mp4 -d MYRIAD
+python video_object_detection.py
 ```
-
+-------
+## Exercises
+### 1 Modify the script to run different videos
+### 2. Modify the script to run on different devices
 Try running the script with different videos and different devices. You can find some videos in the **resources** folder. And, get the available devices by running the following python command:
 
 ```python
@@ -61,5 +64,9 @@ from openvino.runtime import Core
 ie = Core()
 print(ie.available_devices)
 ```
+**How much FPS do you get for each device? Which device is the fastest?**
+
+### 3. Modify the script to run on your webcam video stream
+
 -------
-In this section, we learned how to use the OpenVINO Model Zoo to perform object detection on images and videos. In the next section, we will learn how to use the OpenVINO Model Optimizer to convert a custom model to the Intermediate Representation format.
+In this section, we learned how to use the OpenVINO Model Zoo to perform object detection on images and videos. In the next section, we will learn how to use the OpenVINO Model Optimizer to convert a custom model to the Intermediate Representation format. Continue to the [03-image-classification-openvino-model-optimizer](03-image-classification-openvino-model-optimizer.md) guide.

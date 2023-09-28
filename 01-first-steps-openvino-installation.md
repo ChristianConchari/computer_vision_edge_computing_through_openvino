@@ -56,13 +56,14 @@ It is recommended to use [Anaconda](https://www.anaconda.com/download) to set up
     pip install numpy
     pip install opencv-python
     pip install matplotlib
+    pip install tensorflow
 
     ```
 
 5. Install the development tools [Openvino-dev](https://docs.openvino.ai/2022.3/openvino_docs_install_guides_install_dev_tools.html#doxid-openvino-docs-install-guides-install-dev-tools)
     
     ```
-    pip install openvino-dev[tensorflow2]==2022.3.1
+    pip install openvino-dev
     ```
 
 6. Test the installation by running the following command:
@@ -115,6 +116,12 @@ You can also refer to the following resource:
 
 - [Addtional configuration resources](https://medium.com/openvino-toolkit/how-to-run-openvino-with-neural-compute-stick-2-on-linux-9ab1f185c920)
 
-You're all set! Now you have OpenVINO configured on your computer, and you're ready to explore the exciting world of Artificial Vision through Edge Computing.
+Execute the following Python script to check the installation; it should list the connected devices, and you should see a new MYRIAD device, which corresponds to the Intel NCS2.
+    
+    ```python
+    from openvino.runtime import Core
+    ie = Core()
+    print(ie.available_devices)
+    ```
 
-Please note that this guide assumes you have some prior knowledge, but don't hesitate to ask if you have any questions!
+You're all set! Now you have OpenVINO configured on your computer, and you're ready to explore the exciting world of Artificial Vision through Edge Computing. Now, we will continue with the [02-object-detection-openvino-model-zoo](02-object-detection-openvino-model-zoo.md) guide.
