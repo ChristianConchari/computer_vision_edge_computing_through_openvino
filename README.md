@@ -8,8 +8,8 @@ Welcome to the workshop on Computer Vision and Edge Computing through the Intel 
 
 <img title="" alt="Alt text" src="assets/openvino_banner.png">
 
-A summary of the contents of this workshop is presented below:
+In this workshop, we will delve into computer vision and artificial intelligence, more specifically, deep learning through the OpenVino Framework. The in-person version of this workshop also utilizes the Intel NCS2 inference accelerator.
 
 1. [OpenVINO Toolkit Installation](01-first-steps-openvino-installation.md)
 2. [Object Detection: OpenVINO Model Zoo](02-object-detection-openvino-model-zoo.md)
-3. [Image Clasification: Custom Models](03-image-clasification-custom-models.md)
+3. [Image Clasification: Custom Models and model optimizers](03-image-clasification-openvino-model-optimizer.md)
