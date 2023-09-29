@@ -1,5 +1,7 @@
 # Computer Vision and Edge Computing through the Intel OpenVINO toolkit
 
+![UCB - ITEC Banner](assets\itec_ucb_banner.png)
+
 Welcome to the workshop on Computer Vision and Edge Computing through the Intel OpenVINO toolkit. This workshop is part of the ITEC 2023 at the Universidad Católica Boliviana.
 
 ## Contents
