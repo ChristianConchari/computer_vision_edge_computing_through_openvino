@@ -25,12 +25,14 @@ The Intermediate Representation (IR) format is a pair of files that describe the
 Now, once you have downloaded the intel_images_cnn or/and the intel_images_mobileNetV2 saved model directory.  Execute the following command to convert the model to IR format:
 
 ```
-mo --use_legacy_frontend --saved_model_dir /intel_image_cnn --input_shape=[1,150,150,3]  
+mo --use_legacy_frontend --saved_model_dir /intel_image_cnn --input_shape=[1,150,150,3] 
 ```
 
 ```
 mo --use_legacy_frontend --saved_model_dir /intel_image_mobileNetV2 --input_shape=[1,224,224,3]  
 ```
+
+Note: If you want to convert the model to FP16 precision, you can add the `----compress_to_fp16=True` argument to the command. If the original model has FP32 weights or biases, they are compressed to FP16. All intermediate data is kept in original precision. 
 
 The model will be converted to IR format and saved in the current directory as `saved_model.xml` and `saved_model.bin`. Then, rename the files to `intel_image_cnn.xml` and `intel_image_cnn.bin`, `intel_image_mobileNetV2.xml` and `intel_image_mobileNetV2.bin`, then, copy them to the `image_classification/resources/models` folder.
 
