@@ -6,6 +6,8 @@ Welcome to the workshop on Computer Vision and Edge Computing through the Intel 
 
 ## Contents
 
+<img title="" alt="Alt text" src="assets/openvino_banner.png">
+
 A summary of the contents of this workshop is presented below:
 
 1. [OpenVINO Toolkit Installation](01-first-steps-openvino-installation.md)
